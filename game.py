@@ -61,3 +61,10 @@ def lookup_game_by_name_or_alias(name):
         if game.loosely_matches(name):
             return game
     return Game(name=name) if name else None
+
+def find_games(string):
+    game_list = []
+    for game in games:
+        if game.loosely_matches(name):
+            game_list.append(game)
+    return game_list
